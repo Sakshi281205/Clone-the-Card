@@ -9,118 +9,247 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="product-card">
-            <!-- Product Image Section -->
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&crop=center" alt="Product Image">
-                <div class="image-overlay">
-                    <button class="quick-view-btn">Quick View</button>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="amazon-logo">
+                <svg width="103" height="31" viewBox="0 0 103 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.6 0.8C15.6 0.4 15.2 0 14.8 0H1.2C0.8 0 0.4 0.4 0.4 0.8V2.4C0.4 2.8 0.8 3.2 1.2 3.2H14.8C15.2 3.2 15.6 2.8 15.6 2.4V0.8Z" fill="#FF9900"/>
+                    <path d="M15.6 5.6C15.6 5.2 15.2 4.8 14.8 4.8H1.2C0.8 4.8 0.4 5.2 0.4 5.6V7.2C0.4 7.6 0.8 8 1.2 8H14.8C15.2 8 15.6 7.6 15.6 7.2V5.6Z" fill="#FF9900"/>
+                    <path d="M15.6 10.4C15.6 10 15.2 9.6 14.8 9.6H1.2C0.8 9.6 0.4 10 0.4 10.4V12C0.4 12.4 0.8 12.8 1.2 12.8H14.8C15.2 12.8 15.6 12.4 15.6 12V10.4Z" fill="#FF9900"/>
+                    <path d="M15.6 15.2C15.6 14.8 15.2 14.4 14.8 14.4H1.2C0.8 14.4 0.4 14.8 0.4 15.2V16.8C0.4 17.2 0.8 17.6 1.2 17.6H14.8C15.2 17.6 15.6 17.2 15.6 16.8V15.2Z" fill="#FF9900"/>
+                    <path d="M15.6 20C15.6 19.6 15.2 19.2 14.8 19.2H1.2C0.8 19.2 0.4 19.6 0.4 20V21.6C0.4 22 0.8 22.4 1.2 22.4H14.8C15.2 22.4 15.6 22 15.6 21.6V20Z" fill="#FF9900"/>
+                    <path d="M15.6 24.8C15.6 24.4 15.2 24 14.8 24H1.2C0.8 24 0.4 24.4 0.4 24.8V26.4C0.4 26.8 0.8 27.2 1.2 27.2H14.8C15.2 27.2 15.6 26.8 15.6 26.4V24.8Z" fill="#FF9900"/>
+                    <path d="M15.6 29.6C15.6 29.2 15.2 28.8 14.8 28.8H1.2C0.8 28.8 0.4 29.2 0.4 29.6V31.2C0.4 31.6 0.8 32 1.2 32H14.8C15.2 32 15.6 31.6 15.6 31.2V29.6Z" fill="#FF9900"/>
+                    <path d="M32.8 8.8C32.8 4.4 29.2 0.8 24.8 0.8C20.4 0.8 16.8 4.4 16.8 8.8C16.8 13.2 20.4 16.8 24.8 16.8C29.2 16.8 32.8 13.2 32.8 8.8ZM24.8 14.4C22.4 14.4 20.8 12.8 20.8 10.4C20.8 8 22.4 6.4 24.8 6.4C27.2 6.4 28.8 8 28.8 10.4C28.8 12.8 27.2 14.4 24.8 14.4Z" fill="#232F3E"/>
+                    <path d="M45.6 8.8C45.6 4.4 42 0.8 37.6 0.8C33.2 0.8 29.6 4.4 29.6 8.8C29.6 13.2 33.2 16.8 37.6 16.8C42 16.8 45.6 13.2 45.6 8.8ZM37.6 14.4C35.2 14.4 33.6 12.8 33.6 10.4C33.6 8 35.2 6.4 37.6 6.4C40 6.4 41.6 8 41.6 10.4C41.6 12.8 40 14.4 37.6 14.4Z" fill="#232F3E"/>
+                    <path d="M58.4 8.8C58.4 4.4 54.8 0.8 50.4 0.8C46 0.8 42.4 4.4 42.4 8.8C42.4 13.2 46 16.8 50.4 16.8C54.8 16.8 58.4 13.2 58.4 8.8ZM50.4 14.4C48 14.4 46.4 12.8 46.4 10.4C46.4 8 48 6.4 50.4 6.4C52.8 6.4 54.4 8 54.4 10.4C54.4 12.8 52.8 14.4 50.4 14.4Z" fill="#232F3E"/>
+                    <path d="M71.2 8.8C71.2 4.4 67.6 0.8 63.2 0.8C58.8 0.8 55.2 4.4 55.2 8.8C55.2 13.2 58.8 16.8 63.2 16.8C67.6 16.8 71.2 13.2 71.2 8.8ZM63.2 14.4C60.8 14.4 59.2 12.8 59.2 10.4C59.2 8 60.8 6.4 63.2 6.4C65.6 6.4 67.2 8 67.2 10.4C67.2 12.8 65.6 14.4 63.2 14.4Z" fill="#232F3E"/>
+                    <path d="M84 8.8C84 4.4 80.4 0.8 76 0.8C71.6 0.8 68 4.4 68 8.8C68 13.2 71.6 16.8 76 16.8C80.4 16.8 84 13.2 84 8.8ZM76 14.4C73.6 14.4 72 12.8 72 10.4C72 8 73.6 6.4 76 6.4C78.4 6.4 80 8 80 10.4C80 12.8 78.4 14.4 76 14.4Z" fill="#232F3E"/>
+                    <path d="M96.8 8.8C96.8 4.4 93.2 0.8 88.8 0.8C84.4 0.8 80.8 4.4 80.8 8.8C80.8 13.2 84.4 16.8 88.8 16.8C93.2 16.8 96.8 13.2 96.8 8.8ZM88.8 14.4C86.4 14.4 84.8 12.8 84.8 10.4C84.8 8 86.4 6.4 88.8 6.4C91.2 6.4 92.8 8 92.8 10.4C92.8 12.8 91.2 14.4 88.8 14.4Z" fill="#232F3E"/>
+                </svg>
+            </div>
+            <div class="header-search">
+                <div class="search-container">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
             </div>
-
-            <!-- Product Info Section -->
-            <div class="product-info">
-                <!-- Product Title -->
-                <h3 class="product-title">
-                    <a href="#">Wireless Bluetooth Headphones with Noise Cancelling Technology</a>
-                </h3>
-
-                <!-- Rating Section -->
-                <div class="rating-section">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span class="rating-text">4.5</span>
-                    <span class="reviews">(2,847)</span>
+            <div class="header-actions">
+                <div class="header-item">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
                 </div>
-
-                <!-- Price Section -->
-                <div class="price-section">
-                    <span class="current-price">$89.99</span>
-                    <span class="original-price">$129.99</span>
-                    <span class="discount">Save 31%</span>
-                </div>
-
-                <!-- Prime Badge -->
-                <div class="prime-badge">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Prime</span>
-                </div>
-
-                <!-- Delivery Info -->
-                <div class="delivery-info">
-                    <span class="delivery-text">FREE delivery by <strong>Tomorrow</strong></span>
-                </div>
-
-                <!-- Stock Status -->
-                <div class="stock-status">
-                    <span class="in-stock">In Stock</span>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="action-buttons">
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                    <button class="buy-now-btn">Buy Now</button>
+                <div class="header-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- Additional Product Card for variety -->
-        <div class="product-card">
-            <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop&crop=center" alt="Smart Watch">
-                <div class="image-overlay">
-                    <button class="quick-view-btn">Quick View</button>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-item">
+                <i class="fas fa-bars"></i>
+                <span>All</span>
+            </div>
+            <div class="nav-item">Today's Deals</div>
+            <div class="nav-item">Customer Service</div>
+            <div class="nav-item">Registry</div>
+            <div class="nav-item">Gift Cards</div>
+            <div class="nav-item">Sell</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Title -->
+            <div class="page-header">
+                <h1>Featured Products</h1>
+                <p>Discover amazing deals on premium products</p>
+            </div>
+
+            <div class="product-card">
+                <!-- Product Image Section -->
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&crop=center" alt="Product Image">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <div class="product-badges">
+                        <span class="badge new">New</span>
+                        <span class="badge trending">Trending</span>
+                    </div>
+                </div>
+
+                <!-- Product Info Section -->
+                <div class="product-info">
+                    <!-- Product Title -->
+                    <h3 class="product-title">
+                        <a href="#">Wireless Bluetooth Headphones with Noise Cancelling Technology</a>
+                    </h3>
+
+                    <!-- Rating Section -->
+                    <div class="rating-section">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5</span>
+                        <span class="reviews">(2,847)</span>
+                    </div>
+
+                    <!-- Price Section -->
+                    <div class="price-section">
+                        <span class="current-price">$89.99</span>
+                        <span class="original-price">$129.99</span>
+                        <span class="discount">Save 31%</span>
+                    </div>
+
+                    <!-- Prime Badge -->
+                    <div class="prime-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Prime</span>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="delivery-info">
+                        <span class="delivery-text">FREE delivery by <strong>Tomorrow</strong></span>
+                    </div>
+
+                    <!-- Stock Status -->
+                    <div class="stock-status">
+                        <span class="in-stock">In Stock</span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn">Buy Now</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="product-info">
-                <h3 class="product-title">
-                    <a href="#">Smart Watch Series 7 - GPS, Always-On Display</a>
-                </h3>
-
-                <div class="rating-section">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <!-- Additional Product Card for variety -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop&crop=center" alt="Smart Watch">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
                     </div>
-                    <span class="rating-text">4.8</span>
-                    <span class="reviews">(1,234)</span>
+                    <div class="product-badges">
+                        <span class="badge bestseller">Best Seller</span>
+                        <span class="badge limited">Limited Time</span>
+                    </div>
                 </div>
 
-                <div class="price-section">
-                    <span class="current-price">$299.99</span>
-                    <span class="original-price">$399.99</span>
-                    <span class="discount">Save 25%</span>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="#">Smart Watch Series 7 - GPS, Always-On Display</a>
+                    </h3>
+
+                    <div class="rating-section">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">4.8</span>
+                        <span class="reviews">(1,234)</span>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="current-price">$299.99</span>
+                        <span class="original-price">$399.99</span>
+                        <span class="discount">Save 25%</span>
+                    </div>
+
+                    <div class="prime-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Prime</span>
+                    </div>
+
+                    <div class="delivery-info">
+                        <span class="delivery-text">FREE delivery by <strong>Friday</strong></span>
+                    </div>
+
+                    <div class="stock-status">
+                        <span class="in-stock">In Stock</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Product Card -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop&crop=center" alt="Running Shoes">
+                    <div class="image-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <div class="product-badges">
+                        <span class="badge sale">Sale</span>
+                        <span class="badge prime">Prime</span>
+                    </div>
                 </div>
 
-                <div class="prime-badge">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Prime</span>
-                </div>
+                <div class="product-info">
+                    <h3 class="product-title">
+                        <a href="#">Premium Running Shoes - Lightweight & Comfortable</a>
+                    </h3>
 
-                <div class="delivery-info">
-                    <span class="delivery-text">FREE delivery by <strong>Friday</strong></span>
-                </div>
+                    <div class="rating-section">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-text">4.2</span>
+                        <span class="reviews">(3,156)</span>
+                    </div>
 
-                <div class="stock-status">
-                    <span class="in-stock">In Stock</span>
-                </div>
+                    <div class="price-section">
+                        <span class="current-price">$79.99</span>
+                        <span class="original-price">$120.00</span>
+                        <span class="discount">Save 33%</span>
+                    </div>
 
-                <div class="action-buttons">
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                    <button class="buy-now-btn">Buy Now</button>
+                    <div class="prime-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Prime</span>
+                    </div>
+
+                    <div class="delivery-info">
+                        <span class="delivery-text">FREE delivery by <strong>Wednesday</strong></span>
+                    </div>
+
+                    <div class="stock-status">
+                        <span class="in-stock">In Stock</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html> 
